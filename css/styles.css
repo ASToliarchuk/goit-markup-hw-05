@@ -628,8 +628,11 @@ nav{
  }
 
  .box-overlay{
+    overflow: hidden;
     position: relative;
- }
+    cursor: pointer;
+}
+    
 
  .box-overlay::before{
     content: "";
@@ -652,18 +655,19 @@ nav{
     display: inline-block;
 
     position: absolute;
-    top: 63px;
-    left: 24px;
+    top: 0;
+    left: 0;
 
+    padding: 63px 24px;
     font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 1.56;
-        letter-spacing: 0.03em;
-        color: rgba(255, 255, 255, 1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 1);
        
-        opacity: 0;
+    opacity: 0;
  }
 
  .text-portfolio:hover{
@@ -676,6 +680,7 @@ nav{
  
  .text-foto{
     padding: 20px 24px;
+    cursor: pointer;
  }
 
  .item-portfolio{
@@ -759,14 +764,10 @@ nav{
     border: 1px solid rgba(0, 0, 0, 0.1);
 
     cursor: pointer;
-
  }
 
   .icon-close{ 
     display: flex;
-    
-    width: 18px;
-    height: 18px;
     fill: currentColor;
  }
 
