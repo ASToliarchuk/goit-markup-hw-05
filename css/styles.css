@@ -631,8 +631,7 @@ nav{
     overflow: hidden;
     position: relative;
     cursor: pointer;
-}
-    
+ }
 
  .box-overlay::before{
     content: "";
@@ -658,6 +657,7 @@ nav{
     top: 0;
     left: 0;
 
+
     padding: 63px 24px;
     font-family: 'Roboto';
     font-style: normal;
@@ -681,7 +681,8 @@ nav{
  .text-foto{
     padding: 20px 24px;
     cursor: pointer;
- }
+    }
+ 
 
  .item-portfolio{
     min-width: 370px;
@@ -758,7 +759,6 @@ nav{
     width: 30px;
     height: 30px;
     
-
     border-radius: 50%;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -768,6 +768,8 @@ nav{
 
   .icon-close{ 
     display: flex;
+    justify-content: center;
+    align-items: center;
     fill: currentColor;
  }
 
