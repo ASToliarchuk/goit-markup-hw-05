@@ -123,8 +123,7 @@ header{
 
 
 /* Навигация */
-
-nav{
+   .nav{
     display: flex;
     align-items: center;
 }
@@ -135,7 +134,6 @@ nav{
 
  
  /* site-nav */
-
  .site-nav{
     margin-left: 93px;
     display: flex;
@@ -144,7 +142,6 @@ nav{
 
     .site-nav li {
         margin-right: 50px;
-        /* outline: 1px solid tomato; */
     }
 
     .site-nav li:last-child{
@@ -164,6 +161,8 @@ nav{
         display: block;
 
         text-decoration: none;
+
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
  .site-nav .link:hover,
@@ -187,7 +186,6 @@ nav{
 
 
  /* auth-nav */
- 
 .auth-nav{
     margin-left: auto;
     display: flex;
@@ -212,6 +210,8 @@ nav{
         letter-spacing: 0.02em;
         display: flex;
         align-items: center;
+
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-mail:hover,
@@ -230,7 +230,11 @@ nav{
         font-size: 14px;
         line-height: 1.14;
         letter-spacing: 0.02em;
-}
+
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
 
 .link-tel:hover,
 .link-tel:focus{
@@ -253,13 +257,13 @@ nav{
     height: 16px;
     fill: currentColor;
     cursor: pointer;
-    
 }
 
   .icon-tel:hover,
   .icon-tel:focus{
     fill: var(--accent-color);
 }
+
   .icon-mail:hover,
   .icon-mail:focus{
       fill: var(--accent-color);
@@ -268,7 +272,6 @@ nav{
 
 
     /* Герой */
-
     .hero-title h1{
         font-family: 'Roboto';
             font-style: normal;
@@ -280,7 +283,6 @@ nav{
             text-transform: uppercase;
             color: #FFFFFF;
             
-
             margin-bottom: 30px;
             margin-top: 0;
     }
@@ -292,7 +294,6 @@ nav{
         padding-bottom: 200px;
         max-width: 1600px;
         height: 600px;
-
        
         background-color: rgba(47, 48, 58, 0.4);
         background-image: linear-gradient(
@@ -310,7 +311,6 @@ nav{
     }
 
  /* Наши особенности */
-     
     .section {
      padding-top: 94px;
      padding-bottom: 94px;
@@ -439,7 +439,6 @@ nav{
 }
 
  /* Команда */
-
  .card-bg{
     background-color:#FFFFFF;
     width: 270px;
@@ -472,6 +471,9 @@ nav{
         width: 44px;
         height: 44px;
         border-radius: 50%;
+
+        transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
  .link-area:hover .social-links{
@@ -547,7 +549,6 @@ nav{
         }
 
  /* Постоянные клиенты */
-
  .company {
      display: flex;
      align-items: center;
@@ -574,6 +575,9 @@ nav{
         padding: 16px 32px;
 
         cursor: pointer;
+
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
  .client-icons:hover {
@@ -602,7 +606,6 @@ nav{
 
 
     /* Фильтр */
-
  .filter-portfolio{
     padding-top: 94px;
     padding-bottom: 94px;
@@ -620,6 +623,11 @@ nav{
 
  /* Портфолио */
 
+ .portfolio-link{
+    display: block;
+    text-decoration: none;
+ }
+
  .list-portfolio{
     display: flex;
     flex-wrap: wrap;
@@ -628,24 +636,39 @@ nav{
  }
 
  .box-overlay{
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
+    
     cursor: pointer;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
  .box-overlay::before{
     content: "";
     position: absolute;
-    background: rgba(33, 150, 243, 0.9);
-    width: 100%;
-    height: 100%;
     top: 0px;
     left: 0px;
 
+    background: rgba(33, 150, 243, 0.9);
+    width: 100%;
+    height: 100%;
+   
     opacity: 0;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(100%);
+ }
+
+ .item-portfolio:hover .box-overlay::before{
+    transform: translateY(0%);
  }
 
  .box-overlay:hover::before{
+    opacity: 1;
+ }
+
+ .text-foto:hover::before{
     opacity: 1;
  }
 
@@ -668,16 +691,14 @@ nav{
     color: rgba(255, 255, 255, 1);
        
     opacity: 0;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
  .text-portfolio:hover{
     opacity: 1;
  }
 
- .border-foto{
-    border: 1px solid rgba(238, 238, 238, 1);
- }
- 
  .text-foto{
     padding: 20px 24px;
     cursor: pointer;
@@ -689,6 +710,12 @@ nav{
     flex-basis: calc(100% / 3 - 30px);
     margin-right: 30px;
     margin-bottom: 30px;
+ }
+
+ .border-foto {
+    border: 1px solid rgba(238, 238, 238, 1);
+
+    transition: box-shadov 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
  .border-foto:hover,
@@ -715,7 +742,6 @@ nav{
 
 
  /* Модальное окно */
-
  .backdrop{
     position: fixed;
     top: 0;
@@ -889,6 +915,8 @@ footer{
         height: 44px;
         border-radius: 50%;
         background-color:rgba(255, 255, 255, 0.1);
+
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .link-social:hover,
@@ -900,7 +928,6 @@ footer{
     width: 20px;
     height: 20px;
     fill: #FFFFFF;
-
   }
 
 
@@ -950,12 +977,7 @@ footer{
     cursor: pointer;
 }
 
-.button:hover,
-.button:focus{
-    background-color: var(--accent-color);
-}
-
-.button{
+.button {
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 16px;
@@ -970,12 +992,16 @@ footer{
     margin-bottom: 50px;
 
     cursor: pointer;
-  }
 
-  .button:hover,
-  .button:focus{
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover,
+.button:focus{
+    background-color: var(--accent-color);
     color: #FFFFFF;
-  }
+}
 
   
 
